@@ -1,9 +1,22 @@
-function App() {
+import Profile from "./Profile";
+import userData from "./userData.json";
+
+import "./App.css";
+
+const App = () => {
   return (
     <>
-      <h1>React Homework Template (Vite)</h1>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
-}
+};
 
 export default App;
